@@ -1,0 +1,119 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1200px;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 40px;
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+.logo a:hover {
+  text-shadow: 0 0 10px #38bdf8,
+               0 0 20px #38bdf8,
+               0 0 40px #38bdf8;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  background: #38bdf8;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.resume-btn {
+  text-decoration: none;
+
+  color: white;
+
+  border: 2px solid #38bdf8;
+
+  padding: 10px 22px;
+
+  border-radius: 30px;
+
+  transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .resume-btn {
+    display: none;
+  }
+
+  .nav-container {
+    justify-content: center;
+  }
+}

@@ -1,15 +1,17 @@
 main {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+}
+
+#home {
+  text-align: center;
 }
 
 h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: 20px;
 }
 
 p {
