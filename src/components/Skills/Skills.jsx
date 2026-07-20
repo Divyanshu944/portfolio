@@ -1,4 +1,5 @@
 import "./Skills.css";
+import FadeIn from "../animations/FadeIn";
 
 function Skills() {
   const skillCategories = [
@@ -21,6 +22,7 @@ function Skills() {
   ];
 
   return (
+    <FadeIn direction="right">
     <section id="skills" className="skills">
       <h2 className="section-title">My Skills</h2>
 
@@ -38,6 +40,7 @@ function Skills() {
         ))}
       </div>
     </section>
+    </FadeIn>
   );
 }
 

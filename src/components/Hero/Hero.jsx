@@ -1,7 +1,9 @@
 import "./Hero.css";
+import FadeIn from "../animations/FadeIn";
 
 function Hero() {
   return (
+    <FadeIn direction="up">
     <section id="home" className="hero">
 
       <div className="hero-content">
@@ -38,6 +40,7 @@ function Hero() {
       </div>
 
     </section>
+    </FadeIn>
   );
 }
 

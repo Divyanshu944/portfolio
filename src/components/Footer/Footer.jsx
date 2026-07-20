@@ -1,4 +1,5 @@
 import "./Footer.css";
+import FadeIn from "../animations/FadeIn";
 
 import {
   FaGithub,
@@ -10,6 +11,7 @@ import {
 
 function Footer() {
   return (
+    <FadeIn direction="up">
     <footer className="footer">
       <h2>Divyanshu</h2>
 
@@ -65,6 +67,7 @@ function Footer() {
         </p>
       </div>
     </footer>
+    </FadeIn>
   );
 }
 

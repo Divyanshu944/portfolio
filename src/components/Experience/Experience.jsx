@@ -1,4 +1,5 @@
 import "./Experience.css";
+import FadeIn from "../animations/FadeIn";
 
 function Experience() {
   const timeline = [
@@ -41,6 +42,7 @@ function Experience() {
 ];
 
   return (
+    <FadeIn direction="left">
     <section className="experience" id="experience">
       <h2 className="section-title">Professional Journey</h2>
 
@@ -70,6 +72,7 @@ function Experience() {
         ))}
       </div>
     </section>
+    </FadeIn>
   );
 }
 

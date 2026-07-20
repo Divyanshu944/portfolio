@@ -1,4 +1,5 @@
 import "./Contact.css";
+import FadeIn from "../animations/FadeIn";
 
 import {
   FaEnvelope,
@@ -11,6 +12,7 @@ import {
 
 function Contact() {
   return (
+    <FadeIn direction="right">
     <section className="contact" id="contact">
       <h2 className="section-title">Get In Touch</h2>
 
@@ -111,6 +113,7 @@ function Contact() {
 
       </div>
     </section>
+    </FadeIn>
   );
 }
 

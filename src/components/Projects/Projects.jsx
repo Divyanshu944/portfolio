@@ -1,5 +1,6 @@
 import "./Projects.css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import FadeIn from "../animations/FadeIn";
 
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
@@ -71,6 +72,7 @@ function Projects() {
   ];
 
   return (
+    <FadeIn direction="right">
     <section className="projects" id="projects">
       <h2 className="section-title">Featured Projects</h2>
 
@@ -125,6 +127,7 @@ function Projects() {
         ))}
       </div>
     </section>
+    </FadeIn>
   );
 }
 

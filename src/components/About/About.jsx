@@ -1,9 +1,11 @@
 import "./About.css";
+import FadeIn from "../animations/FadeIn";
 import profile from "../../assets/Divyanshu.jpg";
 
 function About() {
   return (
-    <section id="about" className="about">
+    <FadeIn direction="left">
+      <section id="about" className="about">
       <h2 className="section-title">About Me</h2>
 
       <div className="about-container">
@@ -49,6 +51,8 @@ function About() {
         </div>
       </div>
     </section>
+    </FadeIn>
+    
   );
 }
 
