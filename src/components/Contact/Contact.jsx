@@ -1,6 +1,7 @@
 import "./Contact.css";
 import FadeIn from "../animations/FadeIn";
-import { useRef } from "react";
+import { useRef , useState} from "react";
+import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
 import {
@@ -14,9 +15,12 @@ import {
 
 function Contact() {
     const form = useRef();
+    const [loading, setLoading] = useState(false);
 
 const sendEmail = (e) => {
   e.preventDefault();
+
+    setLoading(true);
 
   emailjs
     .sendForm(
@@ -25,17 +29,18 @@ const sendEmail = (e) => {
       form.current,
       "AZgiA0vLk6k0eaXq1"
     )
-    .then(
-      () => {
-        alert("Message sent successfully!");
-        form.current.reset();
-      },
-      (error) => {
-         console.log("EmailJS Error:", error);
-        alert("Failed to send message.");
-        console.log(error.text);
-      }
-    );
+    .then(() => {
+      toast.success("Message sent successfully!");
+
+      form.current.reset();
+
+      setLoading(false);
+    })
+    .catch(() => {
+      toast.error("Failed to send message!");
+
+      setLoading(false);
+    });
 };
 
   return (
@@ -140,8 +145,8 @@ const sendEmail = (e) => {
            placeholder="Write your message..."
           ></textarea>
 
-          <button type="submit">
-            Send Message
+          <button type="submit" disabled={loading}>
+            {loading ? "Sending..." : "Send Message"}
           </button>
 
         </form>
