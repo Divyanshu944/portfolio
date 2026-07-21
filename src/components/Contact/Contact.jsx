@@ -1,5 +1,7 @@
 import "./Contact.css";
 import FadeIn from "../animations/FadeIn";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 import {
   FaEnvelope,
@@ -11,6 +13,31 @@ import {
 } from "react-icons/fa";
 
 function Contact() {
+    const form = useRef();
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      "service_s9ec4bj",
+      "template_pda3o4w",
+      form.current,
+      "AZgiA0vLk6k0eaXq1"
+    )
+    .then(
+      () => {
+        alert("Message sent successfully!");
+        form.current.reset();
+      },
+      (error) => {
+         console.log("EmailJS Error:", error);
+        alert("Failed to send message.");
+        console.log(error.text);
+      }
+    );
+};
+
   return (
     <FadeIn direction="right">
     <section className="contact" id="contact">
@@ -83,26 +110,34 @@ function Contact() {
 
         {/* Right Side */}
 
-        <form className="contact-form">
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
 
           <input
-            type="text"
-            placeholder="Your Name"
+              type="text"
+              name="user_name"
+              placeholder="Your Name"
+              required
           />
 
           <input
             type="email"
+            name="user_email"
             placeholder="Your Email"
+            required
+
           />
 
           <input
             type="text"
+            name="subject"
             placeholder="Subject"
+            required
           />
 
           <textarea
-            rows="6"
-            placeholder="Write your message..."
+           rows="6"
+           name="message"
+           placeholder="Write your message..."
           ></textarea>
 
           <button type="submit">
