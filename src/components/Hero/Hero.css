@@ -1,107 +1,78 @@
-.hero{
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    padding:120px 10%;
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 0 0;
 }
 
-.hero-content{
-
-    max-width:850px;
+.hero-content {
+  max-width: 850px;
 }
 
-.hero-intro{
-
-    color:#38bdf8;
-
-    font-size:1.2rem;
-
-    margin-bottom:20px;
+.hero-intro {
+  color: #38bdf8;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-.hero h1{
-
-    font-size:5rem;
-
-    font-weight:700;
-
-    margin-bottom:15px;
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-.hero h2{
-
-    font-size:2rem;
-
-    color:#94a3b8;
-
-    margin-bottom:25px;
+.hero h2 {
+  font-size: 2rem;
+  color: #94a3b8;
+  margin-bottom: 25px;
 }
 
-.hero-description{
-
-    color:#cbd5e1;
-
-    font-size:1.1rem;
-
-    line-height:1.8;
-
-    margin-bottom:45px;
+.hero-description {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 45px;
 }
 
-.hero-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.btn-primary{
-
-    background:#38bdf8;
-
-    color:#0f172a;
-
-    padding:15px 35px;
-
-    border-radius:40px;
-
-    font-weight:600;
-
-    transition:.3s;
+.btn-primary {
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 15px 35px;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-.btn-primary:hover{
-
-    transform:translateY(-4px);
+.btn-primary:hover {
+  transform: translateY(-4px);
 }
 
-.btn-secondary{
-
-    border:2px solid #38bdf8;
-
-    color:white;
-
-    padding:15px 35px;
-
-    border-radius:40px;
-
-    transition:.3s;
+.btn-secondary {
+  border: 2px solid #38bdf8;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 40px;
+  transition: 0.3s;
 }
 
-.btn-secondary:hover{
+.btn-secondary:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
 
-    background:#38bdf8;
-
-    color:#0f172a;
+.typing-text {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin: 15px 0 25px;
+  min-height: 50px;
 }

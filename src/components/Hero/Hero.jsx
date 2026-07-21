@@ -1,4 +1,5 @@
 import "./Hero.css";
+import { TypeAnimation } from "react-type-animation";
 import FadeIn from "../animations/FadeIn";
 
 function Hero() {
@@ -16,8 +17,24 @@ function Hero() {
           Divyanshu
         </h1>
 
-        <h2>
-          Full Stack Developer
+        <h2 className="typing-text">
+      <TypeAnimation
+        sequence={[
+          "Full Stack Developer",
+          2000,
+          "Frontend Developer",
+          2000,
+          "React Developer",
+          2000,
+          "Backend Developer",
+          2000,
+          "Python Developer",
+          2000,
+        ]}
+        wrapper="span"
+        speed={50}
+        repeat={Infinity}
+      />
         </h2>
 
         <p className="hero-description">

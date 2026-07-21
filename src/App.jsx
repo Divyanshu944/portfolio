@@ -6,11 +6,14 @@ import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
-import TechStack from "./components/TechStack/TechStack";
+import ScrollTop from "./components/ScrollTop/ScrollTop";
+import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
+// import TechStack from "./components/TechStack/TechStack";
 
 function App() {
   return (
     <>
+    <ScrollProgress />
       <Navbar />
       <Hero />
       <About />
@@ -19,7 +22,7 @@ function App() {
       <Experience />
       <Contact />
       <Footer />
-      
+      <ScrollTop />
     </>
   );
 }

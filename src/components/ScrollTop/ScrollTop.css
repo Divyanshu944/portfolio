@@ -1,0 +1,58 @@
+.scrolltop-btn {
+  position: fixed;
+
+  bottom: 35px;
+  right: 35px;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  outline: none;
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+
+  color: #ffffff;
+  font-size: 20px;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
+
+  transition: all 0.35s ease;
+
+  z-index: 9999;
+}
+
+.scrolltop-btn:hover {
+  transform: translateY(-6px) scale(1.08);
+
+  box-shadow: 0 15px 35px rgba(56, 189, 248, 0.55);
+}
+
+.scrolltop-btn:active {
+  transform: scale(0.95);
+}
+
+.scrolltop-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.scrolltop-btn:hover svg {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .scrolltop-btn {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
+    font-size: 18px;
+  }
+}
