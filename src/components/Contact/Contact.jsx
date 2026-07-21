@@ -106,7 +106,12 @@ const sendEmail = (e) => {
 
           </div>
 
-          <a href="/resume.pdf" className="resume-btn" download>
+          <a
+            href="/resume/Divyanshu_Resume.pdf"
+            className="resume-btn"
+            target="_blank"
+            download="Divyanshu_Resume.pdf"
+            >
             <FaFileDownload />
             Download Resume
           </a>
