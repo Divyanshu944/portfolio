@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Experience from "./components/Experience/Experience";
@@ -11,6 +13,20 @@ import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
 // import TechStack from "./components/TechStack/TechStack";
 
 function App() {
+   const [loading, setLoading] = useState(true);
+
+   useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <>
     <ScrollProgress />
