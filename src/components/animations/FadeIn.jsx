@@ -28,7 +28,7 @@ function FadeIn({
         delay,
       }}
       viewport={{
-        once: true,
+        once: false,
         amount: 0.1,
       }}
     >
