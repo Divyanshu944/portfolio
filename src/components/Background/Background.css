@@ -1,0 +1,62 @@
+.background{
+position:fixed;
+inset:0;
+overflow:hidden;
+background:#08111f;
+z-index:-1;
+pointer-events:none;
+}
+
+.icon{
+
+position:absolute;
+color:#38bdf8;
+opacity:.06;
+animation:float 20s ease-in-out infinite;
+filter:drop-shadow(0 0 15px rgba(56,189,248,.25));
+
+}
+
+.icon1{left:5%;top:8%;font-size:70px;animation-duration:22s;}
+.icon2{left:15%;top:70%;font-size:55px;animation-duration:18s;}
+.icon3{left:28%;top:30%;font-size:75px;animation-duration:26s;}
+.icon4{left:42%;top:80%;font-size:60px;animation-duration:20s;}
+.icon5{left:58%;top:18%;font-size:68px;animation-duration:28s;}
+.icon6{left:73%;top:55%;font-size:58px;animation-duration:17s;}
+.icon7{left:88%;top:25%;font-size:72px;animation-duration:24s;}
+.icon8{left:82%;top:85%;font-size:62px;animation-duration:19s;}
+
+.icon9{left:10%;top:45%;font-size:60px;animation-duration:23s;}
+.icon10{left:22%;top:12%;font-size:68px;animation-duration:30s;}
+.icon11{left:36%;top:60%;font-size:58px;animation-duration:20s;}
+.icon12{left:48%;top:38%;font-size:72px;animation-duration:25s;}
+.icon13{left:62%;top:75%;font-size:65px;animation-duration:21s;}
+.icon14{left:77%;top:12%;font-size:70px;animation-duration:29s;}
+.icon15{left:92%;top:60%;font-size:56px;animation-duration:18s;}
+.icon16{left:67%;top:40%;font-size:76px;animation-duration:26s;}
+.icon17{left:30%;top:90%;font-size:66px;animation-duration:24s;}
+.icon18{left:50%;top:5%;font-size:74px;animation-duration:31s;}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px) rotate(0deg) scale(1);
+}
+
+25%{
+transform:translate(-25px,-40px) rotate(90deg) scale(1.08);
+}
+
+50%{
+transform:translate(30px,-70px) rotate(180deg) scale(.95);
+}
+
+75%{
+transform:translate(-20px,-35px) rotate(270deg) scale(1.05);
+}
+
+100%{
+transform:translateY(0px) rotate(360deg) scale(1);
+}
+
+}

@@ -10,6 +10,7 @@ import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
 import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
+import Background from "./components/Background/Background";
 // import TechStack from "./components/TechStack/TechStack";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <>
+     <Background />
     <ScrollProgress />
       <Navbar />
       <Hero />
